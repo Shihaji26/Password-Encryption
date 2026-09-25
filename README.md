@@ -1,6 +1,22 @@
 # Password Encryption Demo
 
-A small signup/login demo built for a school project. It does two things:
+Two versions of the same idea, for a school project. Pick whichever matches
+what your assignment actually needs to demonstrate.
+
+## html-css-only/ — strong-password form, no code
+
+`html-css-only/index.html` is a single file: plain HTML + basic CSS, **no
+JavaScript, no server**. Open it directly in a browser (double-click it).
+The password field uses HTML's built-in `pattern` attribute, so the browser
+itself refuses to submit the form until the password has 8+ characters, an
+uppercase letter, a lowercase letter, a number, and a special character —
+turning the input border red/green as you type. This does **not** store or
+hash anything; it only checks the password format is strong before
+submitting.
+
+## public/ + server.js — full demo with real password hashing
+
+The rest of this repo does two things:
 
 1. **Live password strength feedback** — as the user types, a checklist shows
    whether the password has an uppercase letter, a lowercase letter, a
