@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Encryption Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="signup">Sign Up</button>
+      <button class="tab-btn" data-tab="login">Log In</button>
+    </div>
+
+    <!-- Sign up -->
+    <form id="signup-form" class="tab-panel active">
+      <label for="signup-username">Username</label>
+      <input id="signup-username" type="text" autocomplete="username" required />
+
+      <label for="signup-password">Password</label>
+      <input id="signup-password" type="password" autocomplete="new-password" required />
+
+      <ul id="rules" class="rules">
+        <li data-rule="length">At least 8 characters</li>
+        <li data-rule="lower">A lowercase letter</li>
+        <li data-rule="upper">An uppercase letter</li>
+        <li data-rule="number">A number</li>
+        <li data-rule="special">A special character (e.g. ! @ # $)</li>
+      </ul>
+
+      <div class="strength-bar"><div id="strength-fill" class="strength-fill"></div></div>
+      <p id="strength-label" class="strength-label">Password strength: weak</p>
+
+      <button type="submit">Create account</button>
+      <p id="signup-message" class="message"></p>
+    </form>
+
+    <!-- Log in -->
+    <form id="login-form" class="tab-panel">
+      <label for="login-username">Username</label>
+      <input id="login-username" type="text" autocomplete="username" required />
+
+      <label for="login-password">Password</label>
+      <input id="login-password" type="password" autocomplete="current-password" required />
+
+      <button type="submit">Log in</button>
+      <p id="login-message" class="message"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
